@@ -1,26 +1,87 @@
-CUB3D, a raycasting project.
+<h1 align="center" id="title">Cub3D</h1>
 
-In this project, I and tcambel22 made a Wolfenstein 3D style raycaster.
-It uses DDA algorith to calculate the length of the rays to walls (or other objects), and uses this information to generate
-a world, one pixel row at a time. If you do "make base", then it makes a base program, which takes a base .cub file from the maps
-folder as argument. This game only renders walls, and sky / floor as a single colour from the file.
-In order to make the acctual game just run "make". This will make a cub3D executable which takes a .cub file from the maps folder,
-ie lvl1.cub.
-This version renders the same as the base model, but also renders textures for floor, ceiling, doors and sprites. In order to speed
-up processing, we decided to thread the floor, ceiling and sprite calculations to their respective threads. This gave us
-a clear improvement in performance. The game also includes wall collision, catchable ducks, minimap and catchable ducks.
+<p id="description">Recreate a Wolfenstein 2.5D game using raycasting and a low level graphics library</p>
 
-To play the game launch the executable with a map as argument.
+<img src="https://github.com/tcampbel22/cub3d/blob/main/assets/ezgif-367baacdd0097.gif?raw=true" width="800" height="600" align="center">
+  
+<h2>🧐 Features</h2>
 
-W/S & arrow up/down moves the player forward and back.
-A/D strafes left & right.
-Left/right arrows or moving mouse turns the player around.
-Doors can be opened/closed with E or left mouse button.
-Ducks can be caught/released wit hE or left mouse button.
+Here're some of the project's best features:
 
-CATCH ALL THE DUCKS TO WIN!
+*   2.5D Raycasting
+*   Animated Sprites
+*   Minimap
+*   Doors
+*   Score
 
-The levels are the same, except for different textures used.
+<h2>🛠️ Installation Steps</h2>
+
+<p>1. Download</p>
+
+```
+git clone "this repository"
+```
+
+<p>2. Compile</p>
+
+```
+make bonus
+```
+
+<p>3. Run</p>
+
+```
+./cub3D map/lvl15.cub
+```
+
+<h2>About</h2>
+
+This is project from the 42 Curriculum where myself and @Welhox built a 2.5D Raycasting game in C. 
+The idea was to use low level programming to create the game from scratch and recreate the vibes of DOOM or the original Wolfenstein 3D. 
+We created and parse different maps rendered textures created a dynamic minimap animated sprites and doors. 
+The raycasting is made by using the DDA algorithm to render pixel by pixel each texture the result is a 3D looking world built on top of a 2D map.
+As we added extra textures for both floors walls and ceilings we decided to multi thread in order keep the game smooth and playable. 
+
+In the map provided in the instructions you have to catch the ducks in cages. 
+You have a score in the bottom right of the screen but please note the ducks are hidden and can't be seen on the minimap so you need to find them yourself ;)
+
+<h2>Controls</h2>
+
+### Forward
+
+```W or Up Arrow```
+
+### Strafe
+
+```A and D```
+
+### Back
+
+```S or Down Arrow```
+
+### Pan
+
+```Left or Right Arrow or use the mouse```
+
+### Activate Door/Catch Duck
+
+```E or left mouse click```
+
+### Exit
+
+```esc```
+
+  
+  
+<h2>💻 Built with</h2>
+
+Technologies used in the project:
+
+*   MLX42/SFML
+*   C
+
+<h2>Addtional Screenshots</h2>
+
 lvl1.cub
 ![Screenshot from 2024-09-17 11-22-27](https://github.com/user-attachments/assets/20db01ef-53dc-46bc-84a5-9f5453018080)
 ![Screenshot from 2024-09-17 11-23-03](https://github.com/user-attachments/assets/275fc002-77ea-45b3-a1c7-f1b4ef856118)
@@ -50,14 +111,6 @@ lvl6.cub
 ![Screenshot from 2024-09-17 11-27-16](https://github.com/user-attachments/assets/fe9213bb-f1e6-4770-bb92-66ca4a6f093b)
 ![Screenshot from 2024-09-17 11-27-35](https://github.com/user-attachments/assets/8ff0b2c0-9ee2-4aa7-9a24-e160363b350a)
 
-base1.cub
-![Screenshot from 2024-09-17 11-28-04](https://github.com/user-attachments/assets/b0fe7997-46d3-4c3d-b114-24058b82fa74)
-![Screenshot from 2024-09-17 11-28-14](https://github.com/user-attachments/assets/7e647b39-81ec-473a-a485-ddeb0207970c)
-
-base2.cub
-![Screenshot from 2024-09-17 11-28-33](https://github.com/user-attachments/assets/c90f62cc-da32-4d51-9fa5-dfc43fcbef9a)
-![Screenshot from 2024-09-17 11-28-49](https://github.com/user-attachments/assets/484310ed-4cd1-4876-9fd3-38d86528f18d)
-![Screenshot from 2024-09-17 11-28-58](https://github.com/user-attachments/assets/cd0160b4-5ea7-4073-9faa-7c1bf7cb52c2)
 
 
 
